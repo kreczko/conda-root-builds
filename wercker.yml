@@ -3,10 +3,7 @@ box: nodesource/trusty
 build:
   # The steps that will be executed on build
   steps:
-    - docker_build:
-      name: build docker image
-      code: |
-        docker build -t kreczko/conda-root-builds .
+    -  docker build -t kreczko/conda-root-builds .
 deploy:
   steps:
     - internal/docker-push:
